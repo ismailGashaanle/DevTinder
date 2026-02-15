@@ -1,0 +1,23 @@
+{
+  "name": "devtinder_backend",
+  "version": "1.0.0",
+  "description": "backend server",
+  "keywords": [
+    "node",
+    "js",
+    "libuv",
+    "v8_egnine",
+    "express",
+    "js"
+  ],
+  "license": "ISC",
+  "author": "ismail oday",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
