@@ -15,17 +15,26 @@ const cors=require("cors")
 
 
 
+// app.use(
+//   cors({
+// //   origin:[ "http://localhost:5173],
+//  origin: [
+//     "http://localhost:5173", // local dev frontend
+//     "https://dev-tinder-web-rho-five.vercel.app" // deployed frontend
+//   ],
+//   credentials:true,
+// })
+
+// )
 app.use(
   cors({
-//   origin:[ "http://localhost:5173],
- origin: [
-    "http://localhost:5173", // local dev frontend
-    "https://dev-tinder-web-rho-five.vercel.app" // deployed frontend
-  ],
-  credentials:true,
-})
-
-)
+    origin: [
+      "http://localhost:5173",
+      "https://dev-tinder-web-rho-five.vercel.app"
+    ],
+    credentials: true,
+  })
+);
    app.use(express.json()) // this is middleware 
  app.use(cookieParse())
  
