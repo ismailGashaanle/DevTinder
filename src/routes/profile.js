@@ -13,6 +13,7 @@ const {ValidateDataProfileUpdate,ValidatePatchUpdate,ValidatePasswordUPdatProfil
 
     try{
         
+      if(!user) return
       
         const user=req.user
             res.send(user)
