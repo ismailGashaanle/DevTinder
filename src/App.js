@@ -29,7 +29,7 @@ const cors=require("cors")
 app.use(
   cors({
     origin: [
-      process.env.frotendURLLocal,
+      process.env.FRONTEND_URL_LOCAL,
       "https://dev-tinder-web-rho-five.vercel.app"
     ],
     credentials: true,
@@ -38,7 +38,7 @@ app.use(
    app.use(express.json()) // this is middleware 
  app.use(cookieParse())
  
-   const port=process.env.PORT //port connection server  
+   const port=process.env.PORT || 5000 //port connection server  
 
 
    const ProfileRouter = require("./routes/profile.js");
@@ -57,10 +57,9 @@ const UserRouter = require("./routes/userRouter.js");
     ConnectDB().then(()=>{
         console.log("database conenction established")
 
-           app.listen(port,(req,res)=>{
-            console.log("server running")
-            })
-
+          app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
         
     }).catch((err)=>{
         console.log("not connected Database")
