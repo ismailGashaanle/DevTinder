@@ -6,8 +6,7 @@ const express=require("express");
 require("dotenv").config();
 const ConnectDB=require("./config/database.js")
 const cors=require("cors")
-
-
+ 
 
    //intilaise app
 
